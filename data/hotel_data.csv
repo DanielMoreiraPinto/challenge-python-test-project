@@ -1,0 +1,4 @@
+name, rating, week_regular, weekend_regular, week_reward, weekend_reward
+'Lakewood', 3, 110, 90, 80, 80
+'Bridgewood', 4, 160, 60, 110, 50
+'Ridgewood', 5, 220, 150, 100, 40
