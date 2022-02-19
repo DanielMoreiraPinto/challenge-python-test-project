@@ -13,11 +13,10 @@ class BookingController():
         self.__hotels = []
         self.__data_dir = './data'
         
-    def assist_booking(self):
+    def assist_booking(self, booking):
         self.__get_hotels()
 
-        input_str = input()
-        client_type, dates = self.__process_input(input_str)
+        client_type, dates = self.__process_input(booking)
         
         qtd_weekdays = qtd_weekends = 0
         for date in dates:
@@ -40,6 +39,7 @@ class BookingController():
                 cheapest_price = cur_price
                 
         print(cheapest_hotel.name)
+        return cheapest_hotel.name
                 
         
     def __process_input(self, input_str):
