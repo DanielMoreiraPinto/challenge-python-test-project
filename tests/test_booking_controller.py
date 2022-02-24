@@ -14,7 +14,6 @@ class TestBookingController(TestCase):
             ("Regular: 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)", 'Ridgewood'),
             ("Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)", 'Ridgewood'))
     @unpack
-    #@pytest.mark.parametrize("input, expected", testdata)
     def test_assist_booking_returns_cheapest_hotel(self, input, expected):
         result = self.sut.assist_booking(input)
         self.assertEqual(result, expected)
