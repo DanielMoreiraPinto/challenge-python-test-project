@@ -57,10 +57,10 @@ class BookingController():
             csv_dict_reader = DictReader(data_file)
             for row in csv_dict_reader:
                 hotel = Hotel(row['name'], row['rating'], 
-                              row['weekday_regular'],
-                              row['weekend_regular'], 
-                              row['weekday_reward'],
-                              row['weekend_reward'])
+                              float(row['weekday_regular']),
+                              float(row['weekend_regular']), 
+                              float(row['weekday_reward']),
+                              float(row['weekend_reward']))
                 hotels.append(hotel)
         self.__hotels = hotels
         
