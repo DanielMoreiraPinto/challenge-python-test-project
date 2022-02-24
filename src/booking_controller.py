@@ -20,7 +20,7 @@ class BookingController():
         
         qtd_weekdays = qtd_weekends = 0
         for date in dates:
-            if date.weekday() < 4:
+            if date.weekday() < 5:
                 qtd_weekdays += 1
             else:
                 qtd_weekends += 1
@@ -34,7 +34,7 @@ class BookingController():
             if (cheapest_hotel == None or 
                 cur_price < cheapest_price
                 or (cur_price == cheapest_price and
-                    hotel.rating < cheapest_hotel.rating)):
+                    hotel.rating > cheapest_hotel.rating)):
                 cheapest_hotel = hotel
                 cheapest_price = cur_price
                 
